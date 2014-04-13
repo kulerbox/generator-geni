@@ -71,6 +71,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-livereload');
  
   grunt.registerTask('serve', ['connect']);
   grunt.registerTask('build', ['concat', 'cssmin']);

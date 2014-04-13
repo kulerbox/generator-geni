@@ -21,22 +21,48 @@ var GeniGenerator = yeoman.generators.Base.extend({
             this.copy("_main.css", "app/css/main.css");    
          
             var context = { 
-                site_name: this.appName 
+                site_name: this.appName, 
+				casino_name: this.casinoName, 
             };
          
             this.template("_header.html", "app/header.html", context);
         },
 
-        generateDemoSection: function() {
-              if (this.addDemoSection) {
-                  var done = this.async();
-                  this.invoke("onepage:section", {args: ["Demo Section"]}, function(){
-                      done();
-                  });
-              } else {
-                  this.write( "app/menu.html", "");
-              }
-        },
+        generateDemoSection: function(){
+			if (this.addDemoSection) {
+				var context = {
+					content: "Demo Section",
+					id: this._.classify("Demo Section")
+				}
+		   
+				var fileBase = Date.now() + "_" + this._.underscored("Demo Section");
+				var htmlFile = "app/sections/" + fileBase + ".html";
+				var cssFile  = "app/css/" + fileBase + ".css"; 
+		   
+				this.template("_section.html", htmlFile, context);
+				this.template("_section.css", cssFile, context);
+			}
+		},
+		generateMenu: function(){
+			var menu = this.read("_menu.html");
+		 
+			var t = '<a><%= name %></a>';
+			var files = this.expand("app/sections/*.html");
+		 
+			for (var i = 0; i < files.length; i++) {
+				var name = this._.chain(files[i]).strRight("_").strLeftBack(".html").humanize().value();
+		   
+				var context = {
+					name: name,
+					id: this._.classify(name)
+				};
+		   
+				var link = this.engine(t, context);
+				menu = this.append(menu, "div.menu", link);
+			}
+		 
+			this.write("app/menu.html", menu);
+		},
         runNpm: function(){
             var done = this.async();
             this.npmInstall("", function(){
@@ -56,6 +82,14 @@ var GeniGenerator = yeoman.generators.Base.extend({
             name: 'appName',
             message: 'What is your app\'s name ?'
         },{
+            name: 'casinoName',
+            message: 'What is the casino\'s name',
+        },{
+            type: 'confirm',
+            name: 'addLangSection',
+            message: 'Would you like to generate a language select ?',
+            default: true
+        },{
             type: 'confirm',
             name: 'addDemoSection',
             message: 'Would you like to generate a demo section ?',
@@ -64,6 +98,8 @@ var GeniGenerator = yeoman.generators.Base.extend({
  
         this.prompt(prompts, function (props) {
             this.appName = props.appName;
+			this.casinoName = props.casinoName;
+			this.addLangSection = props.addLangSection;
             this.addDemoSection = props.addDemoSection;
    
             done();
