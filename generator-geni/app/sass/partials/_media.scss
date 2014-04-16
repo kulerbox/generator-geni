@@ -1,0 +1,183 @@
+// ==|== media queries ======================================================
+// PLACEHOLDER Media Queries for Responsive Design.
+// These override the primary ('mobile first') styles
+// Modify as content requires.
+// ========================================================================== */
+@media only screen and (max-width: 1900px) {
+  /* Style adjustments for viewports 768px and over go here */
+.low-res-center {
+  margin: 0 0 0 8%;
+}
+}
+
+@media only screen and (max-width: 1600px) {
+  /* Style adjustments for viewports 768px and over go here */
+.offer {
+  margin: 0 0 0 145px;
+}
+
+.low-res-center {
+  margin: 0 0 0 8%;
+}
+}
+
+@media only screen and (max-width: 1500px) {
+  /* Style adjustments for viewports 768px and over go here */
+.offer {
+  margin: 0 0 0 125px;
+}
+}
+
+@media only screen and (max-width: 1400px) {
+  /* Style adjustments for viewports 768px and over go here */
+.offer {
+  margin: 0 0 0 50px;
+}
+}
+
+@media only screen and (max-width: 1300px) {
+  /* Style adjustments for viewports 768px and over go here */
+.offer {
+  margin: 0 0 0 5%;
+}
+
+.low-res-center {
+  margin: 0 0 0 5%;
+}
+
+}
+@media only screen and (max-width: 1200px) {
+  /* Style adjustments for viewports 768px and over go here */
+.offer {
+  margin: 0 0 0 3px;
+}
+.characters {
+right: -80px; 
+}
+
+.low-res-center {
+  margin: 0 0 0 5px;
+}
+
+}
+
+@media only screen and (max-width: 1100px) {
+  /* Style adjustments for viewports 768px and over go here */
+.offer {
+  margin: 0 0 0 20px;
+}
+
+.characters {
+right: -170px; 
+}
+
+.steps-1 {
+  position: absolute;
+}
+
+.steps-2 {
+  position: absolute;
+  margin-left: 295px;
+}
+
+.steps-3 {
+  position: absolute;
+  margin-left: 565px;
+}
+
+}
+
+@media only screen and (max-width: 1000px) {
+  /* Style adjustments for viewports 768px and over go here */
+.offer {
+  margin: 0 0 0 145px;
+}
+
+.characters {
+display: none; }
+
+.low-res-center {
+  margin: 0 0 0 50px;
+}
+
+.steps-2 {
+  position: absolute;
+  margin-left: 285px;
+}
+
+.steps-3 {
+  position: absolute;
+  margin-left: 535px;
+}
+}
+
+
+@media only screen and (max-width: 960px) {
+  /* Style adjustments for viewports 768px and over go here */
+.mobile-logo {
+  width: 95%;
+}
+
+.offer {
+  width:100% !important;
+  text-align:center;
+}
+
+.button-wrapper {
+   margin-left:15%;
+}
+
+#language-select {
+  margin: -80px 0px 0px 18px;
+}
+
+.characters {
+display: none; }
+
+.steps-2 {
+  position: absolute;
+  margin-left: 265px;
+}
+
+.steps-3 {
+  position: absolute;
+  margin-left: 515px;
+}
+}
+
+
+
+
+@media only screen and (max-width: 950px) {
+  /* Style adjustments for viewports 768px and over go here */
+.mobile-logo {
+	width: 95%;
+}
+
+.offer {
+  width:100% !important;
+  text-align:center;
+}
+
+.button-wrapper {
+   margin-left:15%;
+}
+
+#language-select {
+	margin: -80px 0px 0px 18px;
+}
+
+.characters {
+display: none; }
+
+}
+// ==|== print styles =======================================================
+// Print styles.
+// Inlined to avoid required HTTP connection: h5bp.com/r
+// ========================================================================== */
+
+@media print {
+  @include h5bp-media-print;
+  
+  /* Style adjustments for print go here */
+}

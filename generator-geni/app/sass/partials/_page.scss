@@ -1,0 +1,338 @@
+@import "compass/css3";
+
+//-----------------------------------------------
+// The following html5-boilerplate styles should
+// probably be customized for each site
+//-----------------------------------------------
+body, select, input, textarea {
+  color: $font-color;
+  // Set your base font here, to apply evenly
+  // font-family: Georgia, serif;
+}
+
+//-----------------------------------
+// Add your own custom styles below
+//-----------------------------------
+
+body {
+	background:url(../img/background.jpg) no-repeat center center fixed; 
+	background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: no-repeat center;  /* Internet Explorer 7/8 */
+  margin: 0px 0 0 0;
+  min-width: 880px;
+}
+
+a {
+	color:white;
+		&:hover { 
+			color:#f8bb1d;
+		}
+}
+
+// __________ 2.3 Language Select______________
+#language-select {
+	position: absolute;
+	@include border-radius(8px);
+	background:#494949;
+    border:1px solid #8A8A8A;
+    width:150px;
+    position:relative;
+    height:25px;
+    margin:-100px 0px 0px 50px;
+      img{
+        height:12px;
+      }
+      a{
+      	text-decoration:none;
+      }
+      ul{
+        max-width:160px;
+        margin:5px 0px 10px 15px;
+        padding-left:0px;
+          li {
+            list-style:none;
+              a{
+                color:white;
+                &:visited {
+                  color:white;
+                }
+                &:hover {
+                  color:white;
+
+                }
+              }
+          }
+      li {
+         line-height: 15px;
+      }
+      } 
+
+      .dropdown {
+        ul {
+          position:relative;
+          background:#7fc2fc;
+          margin:0px 0px 0px -5px;
+          z-index:9999;
+          width:150px;
+          z-index:3;
+          visibility:hidden;
+          position:absolute;
+            li{ 
+              //font-weight:bold;
+              float:left;
+              margin-left:0px;
+              zoom:1;
+              list-style:none;
+              font-weight:normal; 
+              border-bottom:1px solid darken(#7fc2fc,10%);
+              border-top:1px solid lighten(#7fc2fc,10%);
+              color:black;
+              padding:2px 2px 2px 6px;
+              float: none;
+              overflow:hidden;
+
+                &:last-child {
+                  padding-bottom:5px;
+                   border-bottom:1px solid darken(#7fc2fc,10%);
+                }
+                a {
+                  display:block;
+                  padding:0px;
+                  color:#ffffff;
+                  border-right:none;
+                  width:100%;
+                  display:inline-block; 
+                    &:hover {
+                      padding-left:10px;
+                      margin:0px;
+                      color:white;
+                    }
+                }
+            }
+        }
+      }  
+       
+      //level three drop
+      
+      ul.dropdown ul ul { left: 100%; top: 0; }
+      ul.dropdown li:hover > ul { visibility: visible; }
+
+    }
+
+header.row-fluid {
+  max-height:125px;
+}
+
+.container {
+	width:1150px;
+  max-width: 100%;
+	height:auto;
+	margin:0 auto;
+}
+
+.rules {
+  font-size: 18px;
+}
+
+// .videowrapper {
+//     float: none;
+//     clear: both;
+//     width: 85%;
+//     position: relative;
+//     padding-bottom: 56.25%;
+//     height: auto;
+//     padding: 0 0 0 5%;
+//     z-index: 3;
+// }
+
+// .videowrapper img {
+//   max-width: 82%;
+//   width: 100%;
+// }
+// .videowrapper iframe {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 71%;
+//     height: 85%;
+//     margin: 4% 0 0 9%;
+// }
+
+.offer {
+  width: 700px;
+}
+.characters {
+  // margin: -460px 0 0 60px;
+  right: 5px;
+  position: fixed;
+  z-index: -3;
+  bottom: 0;
+}
+
+.character-left {
+    left: 25px;
+  position: fixed;
+  z-index: -3;
+  bottom: 0;
+}
+
+.characters img {
+  // width: 90%;
+}
+
+.get-started {
+  font-size: 22px;
+  z-index: 1;
+  margin-left: 12%
+}
+
+.button-wrapper {
+  margin: 0 0 0 5%;
+  width: 100%;
+}
+
+.install {
+  background: url("../img/download.png") no-repeat;
+  width: 100%;
+  max-width: 280px;
+  height: 60px;
+  padding: 20px 8px; 
+  font-size: 30px;
+  text-shadow: 2px 2px #000;
+  color: #ffffff;
+  text-decoration: none;
+  float: left;
+  text-indent: -1500px;
+  margin: 0 5% 0 0;
+}
+
+.install:hover {
+  background: url("../img/download-h.png") no-repeat;
+  color: #cccccc;
+}
+
+.play {
+  background: url("../img/instant.png") no-repeat;
+  width: 100%;
+  max-width: 280px;
+  height: 60px;
+  padding: 20px 8px; 
+  float: left;
+  text-indent: -1500px;
+}
+
+.play:hover {
+  background: url("../img/instant-h.png") no-repeat;
+  color: #cccccc;
+}
+
+.steps-wrapper {
+  margin: -130px 0 0 85px;
+  font-size: 16px;
+  height: 130px;
+}
+
+.steps-1 {
+  position: absolute;
+}
+
+.steps-2 {
+  position: absolute;
+  margin-left: 305px;
+}
+
+.steps-3 {
+  position: absolute;
+  margin-left: 575px;
+}
+	
+footer {
+  position: relative;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+.low-res-center {
+  margin: 0 0 0 60px;
+}
+
+
+ // language select flag sprite
+      .DAFlag, .DAFlagD {background:url(../img/sprites/casinolavida-sprite.png) -2px -2px no-repeat;}
+      .DEFlag, .DEFlagD {background:url(../img/sprites/casinolavida-sprite.png) -22px -2px no-repeat;}
+      .ELFlag, .ELFlagD {background:url(../img/sprites/casinolavida-sprite.png) -42px -2px no-repeat;}
+      .UKFlag, .UKFlagD {background:url(../img/sprites/casinolavida-sprite.png) -62px -2px no-repeat;}
+      .ESFlag, .ESFlagD {background:url(../img/sprites/casinolavida-sprite.png) -82px -2px no-repeat;}
+      .FIFlag, .FIFlagD {background:url(../img/sprites/casinolavida-sprite.png) -102px -2px no-repeat;}
+      .FRFlag, .FRFlagD {background:url(../img/sprites/casinolavida-sprite.png) -382px -2px no-repeat;}
+      .ITFlag, .ITFlagD {background:url(../img/sprites/casinolavida-sprite.png) -142px -2px no-repeat;}
+      .NLFlag, .NLFlagD {background:url(../img/sprites/casinolavida-sprite.png) -162px -2px no-repeat;}
+      .NOFlag, .NOFlagD {background:url(../img/sprites/casinolavida-sprite.png) -182px -2px no-repeat;}
+      .PTFlag, .PTFlagD {background:url(../img/sprites/casinolavida-sprite.png) -202px -2px no-repeat;}
+      .RUFlag, .RUFlagD {background:url(../img/sprites/casinolavida-sprite.png) -222px -2px no-repeat;}
+      .SVFlag, .SVFlagD {background:url(../img/sprites/casinolavida-sprite.png) -242px -2px no-repeat;}
+      .USFlag, .USFlagD {background:url(../img/sprites/casinolavida-sprite.png) -262px -2px no-repeat;}
+      .ZAFlag, .ZAFlagD {background:url(../img/sprites/casinolavida-sprite.png) -282px -2px no-repeat;}
+      .ZHFlag, .ZHFlagD {background:url(../img/sprites/casinolavida-sprite.png) -302px -2px no-repeat;}
+      .BRFlag, .BRFlagD {background:url(../img/sprites/casinolavida-sprite.png) -322px -2px no-repeat;}
+      .JAFlag, .JAFlagD {background:url(../img/sprites/casinolavida-sprite.png) -342px -2px no-repeat;}
+      .CAFlag, .CAFlagD {background:url(../img/sprites/casinolavida-sprite.png) -362px -2px no-repeat;}
+      .EUFlag, .EUFlagD {background:url(../img/sprites/casinolavida-sprite.png) -382px -2px no-repeat;}
+      .ATFlag, .ATFlagD {background:url(../img/sprites/casinolavida-sprite.png) -402px -2px no-repeat;}
+      .BEFlag, .BEFlagD {background:url(../img/sprites/casinolavida-sprite.png) -422px -2px no-repeat;}
+      .CHFlag, .CHFlagD {background:url(../img/sprites/casinolavida-sprite.png) -442px -2px no-repeat;}
+      .PLFlag, .PLFlagD {background:url(../img/sprites/casinolavida-sprite.png) -462px -2px no-repeat;}
+      .TRFlag, .TRFlagD {background:url(../img/sprites/casinolavida-sprite.png) -482px -2px no-repeat;}
+      .HUFlag, .HUFlagD {background:url(../img/sprites/casinolavida-sprite.png) -502px -2px no-repeat;}
+      .MLFlag, .MLFlagD {background:url(../img/sprites/casinolavida-sprite.png) -522px -2px no-repeat;}
+      .EEFlag, .EEFlagD {background:url(../img/sprites/casinolavida-sprite.png) -542px -2px no-repeat;}
+      .CZFlag, .CZFlagD {background:url(../img/sprites/casinolavida-sprite.png) -562px -2px no-repeat;}
+      .ARFlag, .ARFlagD {background:url(../img/sprites/casinolavida-sprite.png) -582px -2px no-repeat;}
+      .ISFlag, .ISFlagD {background:url(../img/sprites/casinolavida-sprite.png) -602px -2px no-repeat;}
+      .NZFlag, .NZFlagD {background:url(../img/sprites/casinolavida-sprite.png) -622px -2px no-repeat;}
+      .AUFlag, .AUFlagD {background:url(../img/sprites/casinolavida-sprite.png) -642px -2px no-repeat;}
+
+
+
+.black_overlay{
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index:1001;
+  -moz-opacity: 0.8;
+  opacity:.80;
+  filter: alpha(opacity=80);
+}
+
+.white_content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 3px solid #a02245;
+  background-color: white;
+  color: #000000;
+  z-index:1002;
+  overflow: auto;
+}
+
+.close {
+  padding: 5px;
+  background-color: #a02245;
+  color: #000;
+  text-shadow: 0 0 0 0 !important;
+  opacity: none !important;
+}
+
